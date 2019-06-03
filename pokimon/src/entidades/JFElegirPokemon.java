@@ -42,7 +42,7 @@ public class JFElegirPokemon extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenePokemones/fuego.jpg"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenePokemones/hierva.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenePokemones/hierva.jpg"))); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 2, 18)); // NOI18N
         jLabel4.setText("ELIGE TU POKEMON");
@@ -89,7 +89,7 @@ public class JFElegirPokemon extends javax.swing.JFrame {
                         .addComponent(jButton1)
                         .addGap(71, 71, 71)
                         .addComponent(jButton2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addGroup(layout.createSequentialGroup()
