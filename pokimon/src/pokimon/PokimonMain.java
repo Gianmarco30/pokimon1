@@ -1,7 +1,7 @@
 
 package pokimon;
 
-import entidades.JFventanaprincipal;
+import entidades.*;
 
 
 public class PokimonMain {

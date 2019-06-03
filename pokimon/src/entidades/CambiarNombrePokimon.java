@@ -5,7 +5,6 @@
  */
 package entidades;
 
-import jdk.nashorn.internal.ir.TryNode;
 
 /**
  *
@@ -98,6 +97,7 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
         // TODO add your handling code here:
         JFElegirPokemon marco2 = new JFElegirPokemon();
         marco2.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

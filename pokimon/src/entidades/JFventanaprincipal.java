@@ -4,20 +4,17 @@
  * and open the template in the editor.
  */
 package entidades;
-import Clases.entrenador;
 /**
  *
  * @author alumno
  */
 public class JFventanaprincipal extends javax.swing.JFrame {
 
-    public String nombre;
     public JFventanaprincipal() {
         initComponents();
         setLocationRelativeTo(null);
         
-        entrenador entrenador1 = new entrenador(" ");
-        entrenador1.setNombre(jTextField1.getText());
+        
         
     }
 
@@ -60,9 +57,9 @@ public class JFventanaprincipal extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton2);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/entidades/1.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenePokemones/1.jpg"))); // NOI18N
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/entidades/2.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenePokemones/2.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -146,7 +143,7 @@ public class JFventanaprincipal extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jLabel3)))
@@ -162,7 +159,7 @@ public class JFventanaprincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         JFElegirPokemon marco2 = new JFElegirPokemon();
         marco2.setVisible(true);
-        this.dispose();
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
