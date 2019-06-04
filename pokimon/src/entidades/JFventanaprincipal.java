@@ -4,19 +4,21 @@
  * and open the template in the editor.
  */
 package entidades;
+
+import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
+
 /**
  *
  * @author alumno
  */
 public class JFventanaprincipal extends javax.swing.JFrame {
-
+    
     public JFventanaprincipal() {
         initComponents();
         setLocationRelativeTo(null);
-        
-        
-        
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,7 +29,6 @@ public class JFventanaprincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSeparator1 = new javax.swing.JSeparator();
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -158,11 +159,30 @@ public class JFventanaprincipal extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        JFHistoria1 marco2 = new JFHistoria1();
-        marco2.setVisible(true);
-        dispose();
+        if (jTextField1.getText().length()==0){
+            JOptionPane.showMessageDialog(null,"ERROR...Ingrese nuevamente sus datos");
+        }
+        else{
+            if (jRadioButton1.isSelected()){
+            JOptionPane.showMessageDialog(null,"Bienvenida " + jTextField1.getText());
+            JFHistoria1 marco2 = new JFHistoria1();
+            marco2.setVisible(true);
+            dispose();
+            }
+            else if (jRadioButton2.isSelected()){
+            JOptionPane.showMessageDialog(null,"Bienvenido " + jTextField1.getText());
+            JFHistoria1 marco2 = new JFHistoria1();
+            marco2.setVisible(true);
+            dispose();   
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"ERROR...Ingrese nuevamente sus datos");
+            }
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
     /**
      * @param args the command line arguments
      */
@@ -208,9 +228,8 @@ public class JFventanaprincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
+    public static javax.swing.JRadioButton jRadioButton1;
+    public static javax.swing.JRadioButton jRadioButton2;
+    public static javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
