@@ -18,10 +18,22 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
     public CambiarNombrePokimon() {
         initComponents();
         setLocationRelativeTo(null);
-        if (JFElegirPokemon.jButton1.isSelected()){
+        
+        if (JFElegirPokemon.jRadioButton1.isSelected()){
             NombrePokemon = JFElegirPokemon.jLabel5.getText();
             jLabel2.setText(NombrePokemon);
         }
+        else if (JFElegirPokemon.jRadioButton2.isSelected()){
+            NombrePokemon = JFElegirPokemon.jLabel6.getText();
+            jLabel2.setText(NombrePokemon);
+        }
+        else if (JFElegirPokemon.jRadioButton3.isSelected()){
+            NombrePokemon = JFElegirPokemon.jLabel7.getText();
+            jLabel2.setText(NombrePokemon);
+        }
+        
+        
+        
         
     }
 
@@ -52,6 +64,12 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
             }
         });
 
@@ -120,6 +138,10 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
