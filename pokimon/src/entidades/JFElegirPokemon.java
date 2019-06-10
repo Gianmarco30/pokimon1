@@ -5,6 +5,8 @@
  */
 package entidades;
 
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -91,9 +93,14 @@ public class JFElegirPokemon extends javax.swing.JFrame {
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        CambiarNombrePokimon marco3 = new CambiarNombrePokimon();
-        marco3.setVisible(true);
-        dispose();
+        if (jRadioButton1.isSelected() || jRadioButton2.isSelected() || jRadioButton3.isSelected()){
+            CambiarNombrePokimon marco3 = new CambiarNombrePokimon();
+            marco3.setVisible(true);
+            dispose();
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "ERROR ... Debe elegir un pokemon.");        }
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

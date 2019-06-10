@@ -16,11 +16,8 @@ public class Pokemon {
 
     public Pokemon(String nombre) {
         this.nombre = nombre;
+        vida = 40 + nivel*5;
     }
-    public void Atacar(){
-        
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -45,5 +42,37 @@ public class Pokemon {
         this.vida = vida;
     }
     
+    public String MostrarEstado(){
+        String estado = this.vida + " HP";
+        return estado;
+    }
+    public String Atacar(Pokemon contrincante){
+        String resultado = "";
+        int ataque = (int)(Math.random()*5 + 5);
+        int critico = (int)(Math.random()*100);
+        
+        if (critico <= 20){
+            ataque = (int)(ataque*2);
+        }
+        if (critico > 20 || critico <= 27){
+            ataque = 0;
+        }
+        contrincante.vida = contrincante.vida - ataque;
+        
+        if (contrincante.vida < 0){
+            contrincante.vida = 0;
+        }
+        if (critico <= 20){
+            resultado = contrincante.nombre + " recibio un ataque critico de " + ataque;
+        }
+        else if (critico > 20 || critico <=27){
+            resultado = contrincante.nombre + " esquivo el ataque.";
+        }
+        else{
+            resultado = contrincante.nombre + " recibio un ataque de " + ataque;
+        }        
+        
+        return resultado;    
+    }
     
 }
