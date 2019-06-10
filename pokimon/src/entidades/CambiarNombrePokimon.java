@@ -144,16 +144,21 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (JFElegirPokemon.jRadioButton1.isSelected()){
             JFBatalla1 batalla = new JFBatalla1();
+            JFBatalla1.jLabel7.setText(NombrePokemon);
             batalla.setVisible(true);
         }
         else if (JFElegirPokemon.jRadioButton2.isSelected()){
             JFBatalla2 batalla = new JFBatalla2();
+            JFBatalla2.jLabel7.setText(NombrePokemon);
             batalla.setVisible(true);
         }
         else if (JFElegirPokemon.jRadioButton3.isSelected()){
             JFBatalla3 batalla = new JFBatalla3();
+            JFBatalla3.jLabel7.setText(NombrePokemon);
             batalla.setVisible(true);
         }
+        
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -162,6 +167,7 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -200,11 +206,11 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    public static javax.swing.JButton jButton1;
+    public static javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
+    public static javax.swing.JLabel jLabel2;
+    public static javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

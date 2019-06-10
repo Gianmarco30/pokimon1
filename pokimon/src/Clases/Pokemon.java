@@ -10,38 +10,15 @@ package Clases;
  * @author alumno
  */
 public class Pokemon {
-    private String nombre;
+    public String nombre;
     private int nivel;
-    private int vida;
+    public int vida;
 
     public Pokemon(String nombre) {
         this.nombre = nombre;
         vida = 40 + nivel*5;
     }
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getNivel() {
-        return nivel;
-    }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-    
+   
     public String MostrarEstado(){
         String estado = this.vida + " HP";
         return estado;
@@ -54,7 +31,7 @@ public class Pokemon {
         if (critico <= 20){
             ataque = (int)(ataque*2);
         }
-        if (critico > 20 || critico <= 27){
+        else if (critico > 20 || critico <= 27){
             ataque = 0;
         }
         contrincante.vida = contrincante.vida - ataque;
@@ -74,5 +51,7 @@ public class Pokemon {
         
         return resultado;    
     }
+
+    
     
 }

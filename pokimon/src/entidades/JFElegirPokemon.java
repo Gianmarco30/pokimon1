@@ -98,6 +98,7 @@ public class JFElegirPokemon extends javax.swing.JFrame {
             marco3.setVisible(true);
             dispose();
         }
+       
         else{
             JOptionPane.showMessageDialog(null, "ERROR ... Debe elegir un pokemon.");        }
         

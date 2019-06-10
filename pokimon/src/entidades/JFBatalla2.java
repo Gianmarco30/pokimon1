@@ -5,18 +5,23 @@
  */
 package entidades;
 
+import Clases.Pokemon;
+
 /**
  *
  * @author alumno
  */
 public class JFBatalla2 extends javax.swing.JFrame {
-
+    Pokemon mipokemon = new Pokemon("");
+    Pokemon rival = new Pokemon("");
+    String NombrePokemon = "";
     /**
      * Creates new form JFBatalla2
      */
     public JFBatalla2() {
         initComponents();
         setLocationRelativeTo(null);
+        jLabel10.setText(JFventanaprincipal.jTextField1.getText());
         if (JFventanaprincipal.jRadioButton1.isSelected()){
             jLabel6.setVisible(true);
             jLabel1.setVisible(false);
@@ -25,6 +30,22 @@ public class JFBatalla2 extends javax.swing.JFrame {
             jLabel1.setVisible(true);
             jLabel6.setVisible(false);
         }
+         if (CambiarNombrePokimon.jButton1.isSelected()){
+            if (JFElegirPokemon.jRadioButton1.isSelected()){
+                NombrePokemon = JFElegirPokemon.jLabel5.getText();
+                jLabel7.setText(NombrePokemon);
+            }
+            else if (JFElegirPokemon.jRadioButton2.isSelected()){
+                NombrePokemon = JFElegirPokemon.jLabel6.getText();
+                jLabel7.setText(NombrePokemon);
+            }
+            else if (JFElegirPokemon.jRadioButton3.isSelected()){
+                NombrePokemon = JFElegirPokemon.jLabel7.getText();
+                jLabel7.setText(NombrePokemon);
+            }
+        }
+        jTextField1.setText(mipokemon.MostrarEstado());
+        jTextField2.setText(rival.MostrarEstado());
     }
 
     /**
@@ -47,6 +68,10 @@ public class JFBatalla2 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(java.awt.Color.red);
@@ -69,6 +94,11 @@ public class JFBatalla2 extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
 
         jButton1.setText("ATACAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, -1, -1));
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 160, 32));
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 160, 32));
@@ -82,9 +112,43 @@ public class JFBatalla2 extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenePokemones/MistyEP1.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
+        jLabel7.setText("jLabel7");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
+
+        jLabel8.setText("Squirtle");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, -1, -1));
+
+        jLabel9.setText("Gary Oak");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, -1, -1));
+
+        jLabel10.setText("jLabel10");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String resultado = mipokemon.Atacar(rival);
+        jTextArea1.append(resultado + "\n");
+        String resultado2 = rival.Atacar(mipokemon);
+        jTextArea1.append(resultado2 + "\n");
+        
+        jTextField1.setText(mipokemon.MostrarEstado());
+        jTextField2.setText(rival.MostrarEstado());
+        
+        AnalizarSituacion();
+    }//GEN-LAST:event_jButton1ActionPerformed
+    
+    void AnalizarSituacion(){
+        if (mipokemon.vida == 0){
+            jTextArea1.append(mipokemon.nombre + " ya no puede continuar " + rival.nombre + " gana ");
+            jButton1.setEnabled(false);
+        }
+        if (rival.vida == 0){
+            jTextArea1.append(rival.nombre + " ya no puede continuar " + mipokemon.nombre + " gana ");
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -123,11 +187,15 @@ public class JFBatalla2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    public static javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    public static javax.swing.JLabel jLabel7;
+    public static javax.swing.JLabel jLabel8;
+    public static javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;

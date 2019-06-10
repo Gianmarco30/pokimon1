@@ -17,6 +17,7 @@ public class JFventanaprincipal extends javax.swing.JFrame {
     public JFventanaprincipal() {
         initComponents();
         setLocationRelativeTo(null);
+        
     }
    
 
