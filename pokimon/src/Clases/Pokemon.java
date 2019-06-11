@@ -16,6 +16,7 @@ public class Pokemon {
 
     public Pokemon(String nombre) {
         this.nombre = nombre;
+        nivel = 5;
         vida = 40 + nivel*5;
     }
    
@@ -27,22 +28,26 @@ public class Pokemon {
         String resultado = "";
         int ataque = (int)(Math.random()*5 + 5);
         int critico = (int)(Math.random()*100);
+        int probabi = (int)(Math.random()*100);
+        
         
         if (critico <= 20){
             ataque = (int)(ataque*2);
         }
-        else if (critico > 20 || critico <= 27){
+        else if (probabi <= 7){
             ataque = 0;
         }
+        
         contrincante.vida = contrincante.vida - ataque;
         
         if (contrincante.vida < 0){
             contrincante.vida = 0;
         }
+        
         if (critico <= 20){
             resultado = contrincante.nombre + " recibio un ataque critico de " + ataque;
         }
-        else if (critico > 20 || critico <=27){
+        else if (probabi <= 7){
             resultado = contrincante.nombre + " esquivo el ataque.";
         }
         else{
@@ -50,6 +55,12 @@ public class Pokemon {
         }        
         
         return resultado;    
+    }
+    public String UsarPocion(Pokemon contrincante){
+        String resultado = "";
+        contrincante.vida = contrincante.vida + 15;
+        resultado = contrincante.nombre + " uso una poción";
+        return resultado;
     }
 
     

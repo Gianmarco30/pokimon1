@@ -16,23 +16,5 @@ public class entrenador {
     public entrenador(String nombre) {
         this.nombre = nombre;
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-    // sljadflajsldfjlaksdjf
-    
     
 }

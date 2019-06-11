@@ -16,6 +16,7 @@ public class JFElegirPokemon extends javax.swing.JFrame {
     public JFElegirPokemon() {
         initComponents();
         setLocationRelativeTo(null);
+        setResizable(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.

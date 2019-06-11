@@ -14,6 +14,8 @@ public class JFHistoria1 extends javax.swing.JFrame {
     public JFHistoria1() {
         initComponents();
         setLocationRelativeTo(null);
+        setResizable(false);
+        
         nombre = JFventanaprincipal.jTextField1.getText();
         jLabel4.setText(nombre);
         Imagen();
@@ -58,14 +60,15 @@ public class JFHistoria1 extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 11, -1, -1));
 
         jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea1.setColumns(20);
+        jTextArea1.setForeground(new java.awt.Color(102, 102, 102));
         jTextArea1.setRows(5);
-        jTextArea1.setText("Hola para iniciarte como\nentrenador poquemon \ntienes que elegir un \npokemon. Ahora solo tengo\ntres un pokemon uno de \nagua, uno de fuego y otro\nde hierva. Presione \ncontinuar para elegir tu \npokemon.");
+        jTextArea1.setText("Hola para iniciarte como\nentrenador poquemon \ntienes que elegir un \npokemon. Ahora solo\ntengo tres un pokemon\nuno de agua, uno de\nfuego y otro de hierva.\nPresione continuar para\nelegir tu pokemon.");
         jTextArea1.setBorder(null);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 18, 220, 176));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 18, 170, 170));
 
         jButton1.setText("CONTINUAR");
         jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -83,12 +86,12 @@ public class JFHistoria1 extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
 
         jLabel4.setText("     ");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 126, 23));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 126, 20));
 
         jLabel5.setText("Hola soy ");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, -1, 20));
 
-        jLabel6.setText("me convertire en ");
+        jLabel6.setText("a partir de hoy seré");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, -1, -1));
 
         jLabel7.setText("un entrenador pokemon");

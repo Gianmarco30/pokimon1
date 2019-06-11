@@ -5,6 +5,9 @@
  */
 package entidades;
 
+import Clases.Pokemon;
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -12,12 +15,14 @@ package entidades;
  */
 public class CambiarNombrePokimon extends javax.swing.JFrame {
     String NombrePokemon = null;
+    public static String sobrenombre = "";
     /**
      * Creates new form CambiarNombrePokimon
      */
     public CambiarNombrePokimon() {
         initComponents();
         setLocationRelativeTo(null);
+        setResizable(false);
         
         if (JFElegirPokemon.jRadioButton1.isSelected()){
             NombrePokemon = JFElegirPokemon.jLabel5.getText();
@@ -31,9 +36,6 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
             NombrePokemon = JFElegirPokemon.jLabel7.getText();
             jLabel2.setText(NombrePokemon);
         }
-        
-        
-        
         
     }
 
@@ -132,7 +134,8 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+   
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         JFElegirPokemon marco2 = new JFElegirPokemon();
@@ -151,22 +154,44 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
             JFBatalla2 batalla = new JFBatalla2();
             JFBatalla2.jLabel7.setText(NombrePokemon);
             batalla.setVisible(true);
+            
         }
         else if (JFElegirPokemon.jRadioButton3.isSelected()){
             JFBatalla3 batalla = new JFBatalla3();
             JFBatalla3.jLabel7.setText(NombrePokemon);
             batalla.setVisible(true);
         }
-        
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code her
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        if (jTextField1.getText().length()==0){
+            JOptionPane.showMessageDialog(null, "ERROR... Ingrese un sobrenombre al pokemon \n "
+                    + "en caso contrario mantener el nombre por defecto");
+        }
+        else{
+            sobrenombre = jTextField1.getText();
+            if (JFElegirPokemon.jRadioButton1.isSelected()){
+            JFBatalla1 batalla = new JFBatalla1();
+            JFBatalla1.jLabel7.setText(jTextField1.getText());
+            batalla.setVisible(true);
+            }
+            else if (JFElegirPokemon.jRadioButton2.isSelected()){
+            JFBatalla2 batalla = new JFBatalla2();
+            JFBatalla2.jLabel7.setText(jTextField1.getText());
+            batalla.setVisible(true);
+            }
+            else if (JFElegirPokemon.jRadioButton3.isSelected()){
+            JFBatalla3 batalla = new JFBatalla3();
+            JFBatalla3.jLabel7.setText(jTextField1.getText());
+            batalla.setVisible(true);
+            }
+        }
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
