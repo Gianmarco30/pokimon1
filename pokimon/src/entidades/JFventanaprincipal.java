@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package entidades;
+import Atxy2k.CustomTextField.RestrictedTextField;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+
 
 /**
  *
@@ -18,7 +20,13 @@ public class JFventanaprincipal extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         this.setResizable(false);
+        restringtxf();
                 
+    }
+    public void restringtxf(){
+        RestrictedTextField a = new RestrictedTextField(jTextField1);
+        a.setLimit(8);
+        a.setOnlyAlphaNumeric(true);
     }
     
     /**

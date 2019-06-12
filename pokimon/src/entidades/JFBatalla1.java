@@ -155,6 +155,7 @@ public class JFBatalla1 extends javax.swing.JFrame {
     int cont = 0;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        mipokemon.nombre = jLabel7.getText();
         String resultado = mipokemon.Atacar(rival);
         jTextArea1.append(resultado + "\n");
         

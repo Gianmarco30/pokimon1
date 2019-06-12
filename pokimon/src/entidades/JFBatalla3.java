@@ -161,6 +161,7 @@ public class JFBatalla3 extends javax.swing.JFrame {
     }
     
     int cont = 0;
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         mipokemon.nombre = jLabel7.getText();

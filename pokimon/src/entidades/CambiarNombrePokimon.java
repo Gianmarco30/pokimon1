@@ -5,6 +5,7 @@
  */
 package entidades;
 
+import Atxy2k.CustomTextField.RestrictedTextField;
 import Clases.Pokemon;
 import javax.swing.JOptionPane;
 
@@ -36,7 +37,12 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
             NombrePokemon = JFElegirPokemon.jLabel7.getText();
             jLabel2.setText(NombrePokemon);
         }
-        
+        restngirCaracteres();
+    }
+    public void restngirCaracteres(){
+        RestrictedTextField a = new RestrictedTextField(jTextField1);
+        a.setLimit(10);
+        a.setOnlyAlphaNumeric(true);
     }
 
     /**
