@@ -25,10 +25,15 @@ public class JFHistoria1 extends javax.swing.JFrame {
         if (JFventanaprincipal.jRadioButton1.isSelected()){
             jLabel3.setVisible(true);
             jLabel2.setVisible(false);
+            jLabel8.setVisible(true);
+            jLabel7.setVisible(false);
+            
         }
         else if (JFventanaprincipal.jRadioButton2.isSelected()){
             jLabel2.setVisible(true);
             jLabel3.setVisible(false);
+            jLabel7.setVisible(true);
+            jLabel8.setVisible(false);
         }
     }
 
@@ -51,6 +56,7 @@ public class JFHistoria1 extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("HISTORIA 1");
@@ -96,6 +102,9 @@ public class JFHistoria1 extends javax.swing.JFrame {
 
         jLabel7.setText("un entrenador pokemon");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, -1, -1));
+
+        jLabel8.setText("una entrenadora pokemon");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -152,6 +161,7 @@ public class JFHistoria1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables

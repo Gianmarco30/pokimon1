@@ -14,11 +14,15 @@ public class Pokemon {
     private int nivel;
     public int vida;
 
+    
     public Pokemon(String nombre) {
         this.nombre = nombre;
         nivel = 5;
         vida = 40 + nivel*5;
     }
+
+    
+    
    
     public String MostrarEstado(){
         String estado = this.vida + " HP";
@@ -34,7 +38,7 @@ public class Pokemon {
         if (critico <= 20){
             ataque = (int)(ataque*2);
         }
-        else if (probabi <= 7){
+        else if (probabi <= 15){
             ataque = 0;
         }
         
@@ -47,7 +51,7 @@ public class Pokemon {
         if (critico <= 20){
             resultado = contrincante.nombre + " recibio un ataque critico de " + ataque;
         }
-        else if (probabi <= 7){
+        else if (probabi <= 15){
             resultado = contrincante.nombre + " esquivo el ataque.";
         }
         else{
@@ -62,6 +66,8 @@ public class Pokemon {
         resultado = contrincante.nombre + " uso una poción";
         return resultado;
     }
+
+    
 
     
     

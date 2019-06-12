@@ -69,6 +69,7 @@ public class JFBatalla2 extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("BATALLA POKIMON");
         setForeground(java.awt.Color.red);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -146,12 +147,14 @@ public class JFBatalla2 extends javax.swing.JFrame {
     void AnalizarSituacion(){
         if (mipokemon.vida == 0){
             jTextArea1.append(mipokemon.nombre + " ya no puede continuar " + rival.nombre + " gana ");
+            JOptionPane.showMessageDialog(null, rival.nombre + " gano la batalla");
             jButton1.setEnabled(false);
             jButton3.setEnabled(false);
             jButton2.setEnabled(false);
         }
         if (rival.vida == 0){
             jTextArea1.append(rival.nombre + " ya no puede continuar " + mipokemon.nombre + " gana ");
+            JOptionPane.showInputDialog(null, mipokemon.nombre + " gano la batalla");
             jButton1.setEnabled(false);
             jButton3.setEnabled(false);
             jButton2.setEnabled(false);
@@ -165,7 +168,7 @@ public class JFBatalla2 extends javax.swing.JFrame {
         
         int pos = (int)(Math.random()*100);
         if (cont < 3){
-            if (pos < 40 && rival.vida <= 30){
+            if (pos < 25 && rival.vida <= 40){
                 String resultado2 = rival.UsarPocion(rival);
                 jTextArea1.append(resultado2 + "\n");
                 cont = cont + 1;

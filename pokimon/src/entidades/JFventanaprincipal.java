@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 package entidades;
-
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 
 /**
  *
@@ -18,10 +18,9 @@ public class JFventanaprincipal extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         this.setResizable(false);
-        
+                
     }
-   
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -53,6 +52,12 @@ public class JFventanaprincipal extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("POKIMONS");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 140, -1));
 
         jLabel2.setFont(new java.awt.Font("Stylus BT", 1, 13)); // NOI18N
@@ -154,6 +159,10 @@ public class JFventanaprincipal extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:z
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     
     /**
