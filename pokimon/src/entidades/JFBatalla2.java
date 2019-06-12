@@ -154,7 +154,7 @@ public class JFBatalla2 extends javax.swing.JFrame {
         }
         if (rival.vida == 0){
             jTextArea1.append(rival.nombre + " ya no puede continuar " + mipokemon.nombre + " gana ");
-            JOptionPane.showInputDialog(null, mipokemon.nombre + " gano la batalla");
+            JOptionPane.showMessageDialog(null, mipokemon.nombre + " gano la batalla");
             jButton1.setEnabled(false);
             jButton3.setEnabled(false);
             jButton2.setEnabled(false);
