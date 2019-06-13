@@ -167,6 +167,7 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
             JFBatalla3.jLabel7.setText(NombrePokemon);
             batalla.setVisible(true);
         }
+        
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -186,6 +187,7 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
             JFBatalla1 batalla = new JFBatalla1();
             JFBatalla1.jLabel7.setText(jTextField1.getText());
             batalla.setVisible(true);
+            
             }
             else if (JFElegirPokemon.jRadioButton2.isSelected()){
             JFBatalla2 batalla = new JFBatalla2();
