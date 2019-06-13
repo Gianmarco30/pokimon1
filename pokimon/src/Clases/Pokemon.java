@@ -62,8 +62,11 @@ public class Pokemon {
     }
     public String UsarPocion(Pokemon contrincante){
         String resultado = "";
-        if (contrincante.vida > 65 )
+        
         contrincante.vida = contrincante.vida + 15;
+        if (contrincante.vida >65){
+            contrincante.vida = 65;
+        }
         resultado = contrincante.nombre + " uso una poción";
         return resultado;
     }
