@@ -113,7 +113,7 @@ public class JFBatalla2 extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 510, 220));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 510, 210));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenePokemones/MistyEP1.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
@@ -162,19 +162,35 @@ public class JFBatalla2 extends javax.swing.JFrame {
     
     
     void AnalizarSituacion(){
-        if (mipokemon.vida == 0){
-            jTextArea1.append(mipokemon.nombre + " ya no puede continuar " + rival.nombre + " gana ");
-            JOptionPane.showMessageDialog(null, rival.nombre + " gano la batalla");
-            jButton1.setEnabled(false);
-            jButton3.setEnabled(false);
-            jButton2.setEnabled(false);
-        }
-        if (rival.vida == 0){
-            jTextArea1.append(rival.nombre + " ya no puede continuar " + mipokemon.nombre + " gana ");
-            JOptionPane.showMessageDialog(null, mipokemon.nombre + " gano la batalla");
-            jButton1.setEnabled(false);
-            jButton3.setEnabled(false);
-            jButton2.setEnabled(false);
+        if (mipokemon.vida == 0 || rival.vida == 0){
+            if (mipokemon.vida == 0){
+                jTextArea1.append(mipokemon.nombre + " ya no puede continuar " + rival.nombre + " gana ");
+                JOptionPane.showMessageDialog(null, rival.nombre + " gano la batalla");
+                jButton1.setEnabled(false);
+                jButton3.setEnabled(false);
+                jButton2.setEnabled(false);
+            }
+            if (rival.vida == 0){
+                jTextArea1.append(rival.nombre + " ya no puede continuar " + mipokemon.nombre + " gana ");
+                JOptionPane.showMessageDialog(null, mipokemon.nombre + " gano la batalla");
+                jButton1.setEnabled(false);
+                jButton3.setEnabled(false);
+                jButton2.setEnabled(false);
+            }
+
+            JFFinal marco = new JFFinal();
+            marco.setVisible(true);
+            JFFinal.jLabel4.setVisible(false);
+            if (mipokemon.vida == 0){
+                JFFinal.jLabel3.setVisible(false);
+                JFFinal.jLabel5.setVisible(true);
+                dispose();
+            }
+            else if (rival.vida == 0){
+                JFFinal.jLabel3.setVisible(true);
+                JFFinal.jLabel5.setVisible(false);
+                dispose();
+            }
         }
     }
     int cont = 0;

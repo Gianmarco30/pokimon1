@@ -160,21 +160,21 @@ public class CambiarNombrePokimon extends javax.swing.JFrame {
         else{
             sobrenombre = jTextField1.getText();
             if (JFElegirPokemon.jRadioButton1.isSelected()){
-            JFBatalla1 batalla = new JFBatalla1();
-            JFBatalla1.jLabel7.setText(jTextField1.getText());
-            batalla.setVisible(true);
-            
+                JFBatalla1 batalla = new JFBatalla1();
+                JFBatalla1.jLabel7.setText(jTextField1.getText());
+                batalla.setVisible(true);
             }
             else if (JFElegirPokemon.jRadioButton2.isSelected()){
-            JFBatalla2 batalla = new JFBatalla2();
-            JFBatalla2.jLabel7.setText(jTextField1.getText());
-            batalla.setVisible(true);
+                JFBatalla2 batalla = new JFBatalla2();
+                JFBatalla2.jLabel7.setText(jTextField1.getText());
+                batalla.setVisible(true);
             }
             else if (JFElegirPokemon.jRadioButton3.isSelected()){
-            JFBatalla3 batalla = new JFBatalla3();
-            JFBatalla3.jLabel7.setText(jTextField1.getText());
-            batalla.setVisible(true);
+                JFBatalla3 batalla = new JFBatalla3();
+                JFBatalla3.jLabel7.setText(jTextField1.getText());
+                batalla.setVisible(true);
             }
+            dispose();
         }
         
     }//GEN-LAST:event_jButton2ActionPerformed

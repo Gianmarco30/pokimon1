@@ -153,20 +153,42 @@ public class JFBatalla1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     void AnalizarSituacion(){
-        if (mipokemon.vida == 0){
+        if (mipokemon.vida == 0 || rival.vida == 0){
+            if (mipokemon.vida == 0){
             jTextArea1.append(mipokemon.nombre + " ya no puede continuar " + rival.nombre + " gana ");
             JOptionPane.showMessageDialog(null,rival.nombre + " gano la batalla");
             jButton1.setEnabled(false);
             jButton2.setEnabled(false);
             jButton3.setEnabled(false);
+            
+            
+            }
+            else if (rival.vida == 0){
+                jTextArea1.append(rival.nombre + " ya no puede continuar " + mipokemon.nombre + " gana ");
+                JOptionPane.showMessageDialog(null, mipokemon.nombre + " gano la batalla");
+
+                jButton1.setEnabled(false);
+                jButton2.setEnabled(false);
+                jButton3.setEnabled(false);
+            }
+           
+            JFFinal marco = new JFFinal();
+            marco.setVisible(true);
+            JFFinal.jLabel3.setVisible(false);
+            if (mipokemon.vida == 0){
+                JFFinal.jLabel4.setVisible(true);
+                JFFinal.jLabel5.setVisible(false);
+                 dispose();
+            }
+            else if (rival.vida == 0){
+                JFFinal.jLabel4.setVisible(false);
+                JFFinal.jLabel5.setVisible(true);
+                dispose();
+            }
         }
-        if (rival.vida == 0){
-            jTextArea1.append(rival.nombre + " ya no puede continuar " + mipokemon.nombre + " gana ");
-            JOptionPane.showMessageDialog(null, mipokemon.nombre + " gano la batalla");
-            jButton1.setEnabled(false);
-            jButton2.setEnabled(false);
-            jButton3.setEnabled(false);
-        }
+            
+        
+        
     }
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -201,6 +223,7 @@ public class JFBatalla1 extends javax.swing.JFrame {
         jTextField2.setText(rival.MostrarEstado());
         
         AnalizarSituacion();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
     
     int Mipocion = 0;

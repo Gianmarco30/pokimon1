@@ -159,19 +159,35 @@ public class JFBatalla3 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     void AnalizarSituacion(){
-        if (mipokemon.vida == 0){
-            jTextArea2.append(mipokemon.nombre + " ya no puede continuar " + rival.nombre + " gana ");
-            JOptionPane.showMessageDialog(null,rival.nombre + " gano la batalla");
-            jButton1.setEnabled(false);
-            jButton2.setEnabled(false);
-            jButton3.setEnabled(false);
-        }
-        if (rival.vida == 0){
-            jTextArea2.append(rival.nombre + " ya no puede continuar " + mipokemon.nombre + " gana ");
-            JOptionPane.showMessageDialog(null, mipokemon.nombre + " gano la batalla");
-            jButton1.setEnabled(false);
-            jButton2.setEnabled(false);
-            jButton3.setEnabled(false);
+        if (mipokemon.vida == 0 || rival.vida == 0){
+            if (mipokemon.vida == 0){
+                jTextArea2.append(mipokemon.nombre + " ya no puede continuar " + rival.nombre + " gana ");
+                JOptionPane.showMessageDialog(null,rival.nombre + " gano la batalla");
+                jButton1.setEnabled(false);
+                jButton2.setEnabled(false);
+                jButton3.setEnabled(false);
+            }
+            if (rival.vida == 0){
+                jTextArea2.append(rival.nombre + " ya no puede continuar " + mipokemon.nombre + " gana ");
+                JOptionPane.showMessageDialog(null, mipokemon.nombre + " gano la batalla");
+                jButton1.setEnabled(false);
+                jButton2.setEnabled(false);
+                jButton3.setEnabled(false);
+            }
+
+            JFFinal marco = new JFFinal();
+            marco.setVisible(true);
+            JFFinal.jLabel5.setVisible(false);
+            if (mipokemon.vida == 0){
+                dispose();
+                JFFinal.jLabel3.setVisible(true);
+                JFFinal.jLabel4.setVisible(false);
+            }
+            else if (rival.vida == 0){
+                dispose();
+                JFFinal.jLabel3.setVisible(false);
+                JFFinal.jLabel4.setVisible(true);
+            }
         }
     }
     
