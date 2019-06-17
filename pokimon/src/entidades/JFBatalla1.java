@@ -283,6 +283,12 @@ public class JFBatalla1 extends javax.swing.JFrame {
         jButton1.setEnabled(false);
         jButton2.setEnabled(false);
         jButton3.setEnabled(false);
+        JFFinal marco = new JFFinal();
+        marco.setVisible(true);
+        JFFinal.jLabel3.setVisible(false);
+        JFFinal.jLabel4.setVisible(true);
+        JFFinal.jLabel5.setVisible(false);
+        dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
