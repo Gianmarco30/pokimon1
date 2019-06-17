@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Clases;
 
-/**
- *
- * @author alumno
- */
+
 public class Pokemon {
     public String nombre;
     private int nivel;
@@ -20,10 +13,7 @@ public class Pokemon {
         nivel = 5;
         vida = 40 + nivel*5;
     }
-
     
-    
-   
     public String MostrarEstado(){
         String estado = this.vida + " HP";
         return estado;
