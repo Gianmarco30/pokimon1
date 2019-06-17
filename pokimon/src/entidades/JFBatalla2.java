@@ -197,10 +197,15 @@ public class JFBatalla2 extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         mipokemon.nombre = jLabel7.getText();
+        mipokemon.ataque = (int)(Math.random()*5+5);
+        mipokemon.esqui = 15;
+        mipokemon.critic = 2;
         String resultado = mipokemon.Atacar(rival);
         jTextArea1.append(resultado + "\n");
         
+      
         int pos = (int)(Math.random()*100);
+        
         if (cont < 3){
             if (pos < 25 && rival.vida <= 40){
                 String resultado2 = rival.UsarPocion(rival);
@@ -208,11 +213,17 @@ public class JFBatalla2 extends javax.swing.JFrame {
                 cont = cont + 1;
             }
             else{
+                rival.ataque = (int)(Math.random()*5+7);
+            rival.esqui = 20;
+            rival.critic = 3;
                 String resultado2 = rival.Atacar(mipokemon);
                 jTextArea1.append(resultado2 + "\n");
             }
         }
         else {
+            rival.ataque = (int)(Math.random()*5+7);
+            rival.esqui = 20;
+            rival.critic = 3;
             String resultado2 = rival.Atacar(mipokemon);
             jTextArea1.append(resultado2 + "\n");
         }
@@ -233,6 +244,7 @@ public class JFBatalla2 extends javax.swing.JFrame {
             jButton2.setEnabled(false);
         }
         int pos = (int)(Math.random()*100);
+        
         if (cont < 3){
             if (pos < 40 && rival.vida <= 30){
                 String resultado2 = rival.UsarPocion(rival);
@@ -240,11 +252,17 @@ public class JFBatalla2 extends javax.swing.JFrame {
                 cont = cont + 1;
             }
             else{
+                rival.ataque = (int)(Math.random()*5+7);
+                rival.esqui = 20;
+                rival.critic = 3;
                 String resultado2 = rival.Atacar(mipokemon);
                 jTextArea1.append(resultado2 + "\n");
             }
         }
         else {
+            rival.ataque = (int)(Math.random()*5+7);
+            rival.esqui = 20;
+            rival.critic = 3;
             String resultado2 = rival.Atacar(mipokemon);
             jTextArea1.append(resultado2 + "\n");
         }

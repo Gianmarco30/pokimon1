@@ -28,35 +28,40 @@ public class Pokemon {
         String estado = this.vida + " HP";
         return estado;
     }
+    public int critic = 2;
+    public int esqui = 15;
+    public int ataque = (int)(Math.random()*5 + 5);
+    
     public String Atacar(Pokemon contrincante){
         String resultado = "";
-        int ataque = (int)(Math.random()*5 + 5);
+        ataque = ataque;
         int critico = (int)(Math.random()*100);
         int probabi = (int)(Math.random()*100);
         
         
         if (critico <= 20){
-            ataque = (int)(ataque*2);
-        }
-        else if (probabi <= 15){
-            ataque = 0;
-        }
-        
-        contrincante.vida = contrincante.vida - ataque;
-        
-        if (contrincante.vida < 0){
-            contrincante.vida = 0;
-        }
-        
-        if (critico <= 20){
+            ataque = (int)(ataque*critic);
+            contrincante.vida = contrincante.vida - ataque;
+            if (contrincante.vida < 0){
+                contrincante.vida = 0;
+            }
             resultado = contrincante.nombre + " recibio un ataque critico de " + ataque;
         }
-        else if (probabi <= 15){
+        else if (probabi <= esqui){
+            
+            contrincante.vida = contrincante.vida;
+            if (contrincante.vida < 0){
+                contrincante.vida = 0;
+            }
             resultado = contrincante.nombre + " esquivo el ataque.";
         }
         else{
+            contrincante.vida = contrincante.vida - ataque;
             resultado = contrincante.nombre + " recibio un ataque de " + ataque;
-        }        
+            if (contrincante.vida < 0){
+                contrincante.vida = 0;
+            }
+        }      
         
         return resultado;    
     }
